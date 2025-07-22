@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mira Saad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ecf0f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      color: #ffffff;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #2c3e50;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 4px solid #3498db;
+    }
+
+    .sidebar button,
+    .sidebar a.connect-btn {
+      background: #2980b9;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      margin: 0.4rem 0;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    .sidebar button:hover,
+    .sidebar a.connect-btn:hover {
+      background: #1abc9c;
+      transform: scale(1.05);
+    }
+
+    .sidebar a.connect-btn {
+      background: #0077b5;
+      font-weight: bold;
+    }
+
+    .content {
+      flex: 2;
+      padding: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .section {
+      display: none;
+      animation: fadeSlideIn 0.6s ease-in-out;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .project, .experience {
+      margin-bottom: 2rem;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeSlideIn {
+      from {opacity: 0; transform: translateX(30px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mira Saad</h1>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <img src="Background.jpeg" alt="Mira Saad Photo">
+      <button onclick="showSection('about')">About Me & Education</button>
+      <button onclick="showSection('skills')">Skills</button>
+      <button onclick="showSection('github')">GitHub</button>
+      <button onclick="showSection('projects')">Projects</button>
+      <button onclick="showSection('experience')">Experience</button>
+      <a href="https://www.linkedin.com/in/mira-saad-a6512822a/" target="_blank" class="connect-btn">🔗 LinkedIn</a>
+    </div>
+
+    <div class="content">
+      <div id="about" class="section active">
+        <h2>About Me</h2>
+        <p>Hello! Currently pursuing a Master’s in Artificial Intelligence at KSU, where I graduated with a B.S. in Software Engineering. I'm passionate about solving complex problems through AI and technology. My background blends technical development with customer-focused communication from sales and support experience.</p>
+        <p><strong>Let’s connect if you're looking for someone who blends analytical skills, software development, and people-centric collaboration to deliver value. 🚀</strong></p>
+
+
+        <h3>Education</h3>
+        <ul>
+          <li><strong>Master in Artificial Intelligence</strong><br>Kennesaw State University, Expected 2025</li>
+          <li><strong>Bachelor of Science in Software Engineering</strong><br>Kennesaw State University, Graduated 2023</li>
+        </ul>
+      </div>
+
+      <div id="skills" class="section">
+        <h2>Skills</h2>
+      
+        <h3>Programming Languages</h3>
+        <p>Python, Java, JavaScript, C#, Swift, HTML, CSS</p>
+      
+        <h3>Data Science & Analysis</h3>
+        <p>Pandas, NumPy, Seaborn, Tableau, Power BI, Data Visualization, Reporting, Root Cause Analysis</p>
+      
+        <h3>Technical Tools & Frameworks</h3>
+        <p>React.js, React Native, Git, GitHub, Visual Studio, Agile, Django, Node.js, SOAP</p>
+      
+        <h3>Machine Learning & AI</h3>
+        <p>TensorFlow, Scikit-Learn, Predictive Modeling, Data Mining, Data Analysis</p>
+      
+        <h3>Statistical Techniques</h3>
+        <p>Regression, Classification, Clustering, Time-Series Analysis</p>
+      
+        <h3>Big Data Technologies</h3>
+        <p>Hadoop, Spark, Apache Kafka</p>
+      
+        <h3>Databases</h3>
+        <p>MySQL, MongoDB, Oracle, Firebase, NoSQL</p>
+      
+        <h3>Cloud Platforms</h3>
+        <p>AWS, Google Cloud</p>
+      
+        <h3>Sales & Prospecting</h3>
+        <p>Cold Calling, LinkedIn Outreach, Email Sequences, Account Planning, Lead Qualification, CRM Management</p>
+      
+        <h3>Customer Engagement</h3>
+        <p>Discovery Calls, ROI Presentations, Relationship Management, Objection Handling</p>
+      
+        <h3>Business Acumen</h3>
+        <p>Pipeline Development, Competitive Research, B2B Sales Strategy, Persona Targeting</p>
+      
+        <h3>Algorithms & Data Structures</h3>
+        <p>Sorting, Searching, Dynamic Programming, Graph Algorithms</p>
+      
+        <h3>Soft Skills</h3>
+        <p>Strong Verbal & Written Communication, Customer Service, Leadership, Time Management, Critical Thinking</p>
+      </div>
+
+      <div id="github" class="section">
+        <h2>GitHub</h2>
+        <p>Check out my code at: <a href="https://github.com/Msaadgha" target="_blank">Msaadgha</a></p>
+      </div>
+
+      <div id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>📸 ShareTheTab – AI Receipt Scanner & Bill Splitter</h3>
+          <p><em>Flutter app for smart and fair bill splitting at restaurants.</em></p>
+          <ul>
+            <li>OCR-powered receipt scanning with Google ML Kit</li>
+            <li>Assign items to friends & calculate tax/tip automatically</li>
+            <li>Cross-platform (iOS & Android) with offline-first architecture</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>🎬 MovieLens Recommendation System</h3>
+          <p><em>Machine learning system for personalized movie recommendations.</em></p>
+          <ul>
+            <li>User & Item-Based Collaborative Filtering</li>
+            <li>Exploratory data analysis & evaluation</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>💰 Household Money Management App</h3>
+          <p><em>Full-stack app helping households manage finances.</em></p>
+          <ul>
+            <li>Built with React.js and REST APIs</li>
+            <li>Real-time budget notifications & analytics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="experience" class="section">
+        <h2>Experience</h2>
+
+        <div class="experience">
+          <h3>OneStream Software – Business Development Rep</h3>
+          <p><em>Alpharetta, GA | April 2025 – Present</em></p>
+          <ul>
+            <li>Prospected finance & IT stakeholders across enterprise accounts</li>
+            <li>Created $1M+ in qualified pipeline using CRM tools & research</li>
+            <li>Improved pitch messaging through industry alignment</li>
+          </ul>
+        </div>
+      
+        <!-- Ashley HomeStores -->
+        <h3>Ashley HomeStores – Sales Representative</h3>
+        <p><em>Cumming, GA | May 2019 – April 2025</em></p>
+        <ul>
+          <li>Boosted revenue by 15% through high-volume outbound sales and lead conversion</li>
+          <li>Leveraged analytics and customer profiles for tailored recommendations and improved retention</li>
+          <li>Delivered compelling product demos with strong ROI focus across customer segments</li>
+          <li>Awarded for top-quartile sales performance and team collaboration in a high-paced setting</li>
+        </ul>
+        
+      
+        <!-- Geek Squad – Senior Agent -->
+        <h3>Geek Squad – Senior Agent</h3>
+        <p><em>Duluth, GA | May 2017 – May 2019</em></p>
+        <ul>
+          <li>Enhanced issue diagnosis using data analysis, increasing customer satisfaction by 20%</li>
+          <li>Built automated pipelines to monitor service metrics and identify optimization opportunities</li>
+          <li>Led cross-functional collaboration to resolve technical issues efficiently and effectively</li>
+          <li>Drove upsell opportunities through data insights and service performance reviews</li>
+        </ul>
+        
+        <!-- Geek Squad – Advanced Repair Agent -->
+        <h3>Geek Squad – Advanced Repair Agent</h3>
+        <p><em>Duluth, GA | May 2015 – May 2017</em></p>
+        <ul>
+          <li>Conducted root cause analysis on recurring technical issues using service data trends</li>
+          <li>Implemented automated data collection systems to improve workflow and resolution times</li>
+          <li>Proactively improved customer experience by identifying potential service issues early</li>
+        </ul>
+      </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
